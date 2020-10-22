@@ -1,0 +1,19 @@
+{
+  "name": "kubersoftware/configs",
+  "type": "library",
+  "description": "Kuber configs",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Nehkin Dmitriy"
+    }
+  ],
+  "minimum-stability": "stable",
+  "autoload": {
+    "psr-4": {
+      "Kubersoftware\\Dto\\CalculatorService": "dto/CalculatorService/",
+      "Kubersoftware\\Enum\\": "enum/"
+    }
+  },
+  "require": {}
+}
