@@ -19,9 +19,9 @@ class CalculatorOrderParamsDto
 
     /**
      * @param int $param_1
-     * @return OrderParamsDto
+     * @return CalculatorOrderParamsDto
      */
-    public function setParam1(int $param_1): OrderParamsDto
+    public function setParam1(int $param_1): CalculatorOrderParamsDto
     {
         $this->param_1 = $param_1;
         return $this;
@@ -37,9 +37,9 @@ class CalculatorOrderParamsDto
 
     /**
      * @param int $param_2
-     * @return OrderParamsDto
+     * @return CalculatorOrderParamsDto
      */
-    public function setParam2(int $param_2): OrderParamsDto
+    public function setParam2(int $param_2): CalculatorOrderParamsDto
     {
         $this->param_2 = $param_2;
         return $this;
