@@ -12,6 +12,7 @@
   "autoload": {
     "psr-4": {
       "Kubersoftware\\Dto\\CalculatorService\\": "dto/CalculatorService/",
+      "Kubersoftware\\Dto\\SecurityService\\": "dto/SecurityService/",
       "Kubersoftware\\Utils\\Security\\": "utils/security/",
       "Kubersoftware\\Enum\\": "enum/"
     }
