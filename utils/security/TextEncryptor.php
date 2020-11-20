@@ -14,6 +14,14 @@ class TextEncryptor
      */
     private string $secret;
 
+
+    /**
+     * Метод шифрования
+     * @link https://www.php.net/manual/ru/function.openssl-get-cipher-methods.php
+     */
+    private const ENCRYPT_METHOD  = 'aes-256-cbc';
+
+
     public function __construct(string $secret)
     {
         $this->secret = $secret;
@@ -30,10 +38,10 @@ class TextEncryptor
         }
 
         // Generate an initialization vector
-        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length('aes-256-cbc'));
+        $iv = openssl_random_pseudo_bytes(openssl_cipher_iv_length(self::ENCRYPT_METHOD));
 
         // Encrypt the data using AES 256 encryption in CBC mode using our encryption key and initialization vector.
-        $encrypted = openssl_encrypt($text, 'aes-256-cbc', $this->secret, 0, $iv);
+        $encrypted = openssl_encrypt($text, self::ENCRYPT_METHOD, $this->secret, 0, $iv);
 
         // The $iv is just as important as the key for decrypting, so save it with our encrypted data using a unique separator (::)
         return base64_encode($encrypted . '::' . $iv);
@@ -52,6 +60,6 @@ class TextEncryptor
         // To decrypt, split the encrypted data from our IV - our unique separator used was "::"
         [$encrypted_data, $iv] = explode('::', base64_decode($text), 2);
 
-        return openssl_decrypt($encrypted_data, 'aes-256-cbc', $this->secret, 0, $iv);
+        return openssl_decrypt($encrypted_data, self::ENCRYPT_METHOD, $this->secret, 0, $iv);
     }
 }
