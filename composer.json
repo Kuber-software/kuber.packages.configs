@@ -12,8 +12,11 @@
   "autoload": {
     "psr-4": {
       "Kubersoftware\\Dto\\CalculatorService\\": "dto/CalculatorService/",
+      "Kubersoftware\\Utils\\Security\\": "utils/security/",
       "Kubersoftware\\Enum\\": "enum/"
     }
   },
-  "require": {}
+  "require": {
+    "ext-openssl": "*"
+  }
 }
