@@ -13,6 +13,7 @@
     "psr-4": {
       "Kubersoftware\\Dto\\CalculatorService\\": "dto/CalculatorService/",
       "Kubersoftware\\Dto\\SecurityService\\": "dto/SecurityService/",
+      "Kubersoftware\\Dto\\UserTokenService\\": "dto/UserTokenService/",
       "Kubersoftware\\Utils\\Security\\": "utils/security/",
       "Kubersoftware\\Enum\\": "enum/"
     }
