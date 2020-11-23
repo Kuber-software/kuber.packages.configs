@@ -14,6 +14,25 @@ class UserSessionDto
     private bool $isActual;
     private UserDto $userDto;
     private string $csrfToken;
+    private UserFingerprintDto $userFingerprint;
+
+    /**
+     * @return UserFingerprintDto
+     */
+    public function getUserFingerprint(): UserFingerprintDto
+    {
+        return $this->userFingerprint;
+    }
+
+    /**
+     * @param UserFingerprintDto $userFingerprint
+     * @return UserSessionDto
+     */
+    public function setUserFingerprint(UserFingerprintDto $userFingerprint): UserSessionDto
+    {
+        $this->userFingerprint = $userFingerprint;
+        return $this;
+    }
 
     /**
      * @return int
