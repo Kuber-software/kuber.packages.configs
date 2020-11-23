@@ -2,15 +2,15 @@
 
 namespace Kubersoftware\Dto\SessionService;
 
-use DateTime;
+use DateTimeInterface;
 
 class UserSessionDto
 {
     private int $id;
     private string $uuid;
-    private DateTime $createdAt;
-    private DateTime $updatedAt;
-    private DateTime $livedAt;
+    private DateTimeInterface $createdAt;
+    private DateTimeInterface $updatedAt;
+    private DateTimeInterface $livedAt;
     private bool $isActual;
     private UserDto $userDto;
     private string $csrfToken;
@@ -52,54 +52,54 @@ class UserSessionDto
     }
 
     /**
-     * @return DateTime
+     * @return DateTimeInterface
      */
-    public function getCreatedAt(): DateTime
+    public function getCreatedAt(): DateTimeInterface
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTime $createdAt
+     * @param DateTimeInterface $createdAt
      * @return UserSessionDto
      */
-    public function setCreatedAt(DateTime $createdAt): UserSessionDto
+    public function setCreatedAt(DateTimeInterface $createdAt): UserSessionDto
     {
         $this->createdAt = $createdAt;
         return $this;
     }
 
     /**
-     * @return DateTime
+     * @return DateTimeInterface
      */
-    public function getUpdatedAt(): DateTime
+    public function getUpdatedAt(): DateTimeInterface
     {
         return $this->updatedAt;
     }
 
     /**
-     * @param DateTime $updatedAt
+     * @param DateTimeInterface $updatedAt
      * @return UserSessionDto
      */
-    public function setUpdatedAt(DateTime $updatedAt): UserSessionDto
+    public function setUpdatedAt(DateTimeInterface $updatedAt): UserSessionDto
     {
         $this->updatedAt = $updatedAt;
         return $this;
     }
 
     /**
-     * @return DateTime
+     * @return DateTimeInterface
      */
-    public function getLivedAt(): DateTime
+    public function getLivedAt(): DateTimeInterface
     {
         return $this->livedAt;
     }
 
     /**
-     * @param DateTime $livedAt
+     * @param DateTimeInterface $livedAt
      * @return UserSessionDto
      */
-    public function setLivedAt(DateTime $livedAt): UserSessionDto
+    public function setLivedAt(DateTimeInterface $livedAt): UserSessionDto
     {
         $this->livedAt = $livedAt;
         return $this;
