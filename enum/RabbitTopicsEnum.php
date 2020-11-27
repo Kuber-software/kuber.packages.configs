@@ -9,4 +9,5 @@ class RabbitTopicsEnum
     public const CALULATOR_TOPIC = "qCalculator";
     public const RESULTS_TOPIC = "qResult";
     public const ERRORS_TOPIC = "qError";
+    public const ENTITY_MANAGER_TOPIC = "qEntityManager";
 }
