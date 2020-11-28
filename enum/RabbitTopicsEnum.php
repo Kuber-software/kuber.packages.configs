@@ -13,7 +13,7 @@ class RabbitTopicsEnum
     public const ENTITY_MANAGER_TOPIC = "qEntityManager";
 
     /**
-     * Очередь для отправки объектов @\Kubersoftware\Dto\EntityManagerService\InsertObject
+     * Очередь для отправки объектов @\Kubersoftware\Dto\EntityManagerService\InsertDto
      */
     public const ENTITY_MANAGER_INSERT_TOPIC = "qEntityManager_InsertDto";
 

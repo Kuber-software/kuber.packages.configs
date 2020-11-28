@@ -4,7 +4,7 @@ namespace Kubersoftware\Dto\EntityManagerService;
 
 use DateTimeInterface;
 
-class InsertObject
+class InsertDto
 {
     /**
      * Название сервиса, который отправил объект.
