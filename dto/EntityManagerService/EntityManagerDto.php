@@ -1,4 +1,5 @@
 <?php
+
 namespace Kubersoftware\Dto\EntityManagerService;
 
 use DateTimeInterface;
@@ -7,9 +8,10 @@ use Kubersoftware\Enum\ServicesListEnum;
 
 class EntityManagerDto
 {
-    private string $service; //object
-    private string $type; //object
-    private string $json;
+    private string $service;     // какой сервис отправил объект
+    private string $type;        // тип, добавление/удаление/обновление/выборка
+    private string $objectName;  // имя объекта
+    private string $objectJson;  // значение объекта
     private DateTimeInterface $createdAt;
 
     /**
@@ -21,10 +23,10 @@ class EntityManagerDto
     }
 
     /**
-     * @param ServicesListEnum $service
+     * @param string $service
      * @return EntityManagerDto
      */
-    public function setService(ServicesListEnum $service): EntityManagerDto
+    public function setService(string $service): EntityManagerDto
     {
         $this->service = $service;
         return $this;
@@ -39,10 +41,10 @@ class EntityManagerDto
     }
 
     /**
-     * @param EntityManagerTypesEnum $type
+     * @param string $type
      * @return EntityManagerDto
      */
-    public function setType(EntityManagerTypesEnum $type): EntityManagerDto
+    public function setType(string $type): EntityManagerDto
     {
         $this->type = $type;
         return $this;
@@ -51,18 +53,36 @@ class EntityManagerDto
     /**
      * @return string
      */
-    public function getJson(): string
+    public function getObjectName(): string
     {
-        return $this->json;
+        return $this->objectName;
     }
 
     /**
-     * @param string $json
+     * @param string $objectName
      * @return EntityManagerDto
      */
-    public function setJson(string $json): EntityManagerDto
+    public function setObjectName(string $objectName): EntityManagerDto
     {
-        $this->json = $json;
+        $this->objectName = $objectName;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getObjectJson(): string
+    {
+        return $this->objectJson;
+    }
+
+    /**
+     * @param string $objectJson
+     * @return EntityManagerDto
+     */
+    public function setObjectJson(string $objectJson): EntityManagerDto
+    {
+        $this->objectJson = $objectJson;
         return $this;
     }
 

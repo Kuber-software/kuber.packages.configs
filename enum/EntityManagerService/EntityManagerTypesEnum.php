@@ -1,7 +1,5 @@
 <?php
-
-
-namespace Kubersoftware\Enum;
+namespace Kubersoftware\Enum\EntityManagerService;
 
 
 class EntityManagerTypesEnum
