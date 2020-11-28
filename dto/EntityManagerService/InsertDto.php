@@ -1,8 +1,7 @@
 <?php
 namespace Kubersoftware\Dto\EntityManagerService;
 
-
-use DateTimeInterface;
+use DateTime;
 
 class InsertDto
 {
@@ -17,9 +16,9 @@ class InsertDto
     /**
      * Время создания объекта
      *
-     * @var DateTimeInterface
+     * @var DateTime
      */
-    private DateTimeInterface $createdAt;
+    private DateTime $createdAt;
 
     /**
      * Имя объекта из списка @\Kubersoftware\Enum\EntityManagerService\EntityNameEnum
@@ -47,27 +46,27 @@ class InsertDto
 
     /**
      * @param string $serviceName
-     * @return InsertObject
+     * @return InsertDto
      */
-    public function setServiceName(string $serviceName): InsertObject
+    public function setServiceName(string $serviceName): InsertDto
     {
         $this->serviceName = $serviceName;
         return $this;
     }
 
     /**
-     * @return DateTimeInterface
+     * @return DateTime
      */
-    public function getCreatedAt(): DateTimeInterface
+    public function getCreatedAt(): DateTime
     {
         return $this->createdAt;
     }
 
     /**
-     * @param DateTimeInterface $createdAt
-     * @return InsertObject
+     * @param DateTime $createdAt
+     * @return InsertDto
      */
-    public function setCreatedAt(DateTimeInterface $createdAt): InsertObject
+    public function setCreatedAt(DateTime $createdAt): InsertDto
     {
         $this->createdAt = $createdAt;
         return $this;
@@ -83,9 +82,9 @@ class InsertDto
 
     /**
      * @param string $objectEntityName
-     * @return InsertObject
+     * @return InsertDto
      */
-    public function setObjectEntityName(string $objectEntityName): InsertObject
+    public function setObjectEntityName(string $objectEntityName): InsertDto
     {
         $this->objectEntityName = $objectEntityName;
         return $this;
@@ -101,9 +100,9 @@ class InsertDto
 
     /**
      * @param string $objectJsonValue
-     * @return InsertObject
+     * @return InsertDto
      */
-    public function setObjectJsonValue(string $objectJsonValue): InsertObject
+    public function setObjectJsonValue(string $objectJsonValue): InsertDto
     {
         $this->objectJsonValue = $objectJsonValue;
         return $this;
