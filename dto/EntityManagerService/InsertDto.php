@@ -6,6 +6,13 @@ use DateTime;
 class InsertDto
 {
     /**
+     * Уникальный индетификатор задачи, выставляемый сервисом TaskManager
+     *
+     * @var string
+     */
+    private string $taskGuid;
+
+    /**
      * Название сервиса, который отправил объект.
      * Название берется из списка @\Kubersoftware\Enum\ServicesListEnum
      *
@@ -105,6 +112,24 @@ class InsertDto
     public function setObjectJsonValue(string $objectJsonValue): InsertDto
     {
         $this->objectJsonValue = $objectJsonValue;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getTaskGuid(): string
+    {
+        return $this->taskGuid;
+    }
+
+    /**
+     * @param string $taskGuid
+     * @return InsertDto
+     */
+    public function setTaskGuid(string $taskGuid): InsertDto
+    {
+        $this->taskGuid = $taskGuid;
         return $this;
     }
 }
