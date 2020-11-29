@@ -15,6 +15,7 @@
       "Kubersoftware\\Dto\\SessionService\\": "dto/SessionService/",
       "Kubersoftware\\Dto\\EntityManagerService\\": "dto/EntityManagerService/",
       "Kubersoftware\\Dto\\ErrorService\\": "dto/ErrorService/",
+      "Kubersoftware\\Dto\\TaskManagerService\\": "dto/TaskManagerService/",
       "Kubersoftware\\Utils\\Security\\": "utils/security/",
       "Kubersoftware\\Enum\\": "enum/",
       "Kubersoftware\\Enum\\EntityManagerService\\": "enum/EntityManagerService/"
