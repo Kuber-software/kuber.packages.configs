@@ -1,18 +1,26 @@
 <?php
-namespace Kubersoftware\Dto\EntityManagerService;
+    namespace Kubersoftware\Dto\EntityManagerService;
 
 use DateTime;
+use Kubersoftware\Dto\TaskManagerService\TaskDto;
 
 class InsertDto
 {
-    /**
+    /** NEW
+     * Информация о задаче
+     * @var TaskDto
+     */
+    private TaskDto $taskDto;
+
+
+    /** OLD
      * Уникальный индетификатор задачи, выставляемый сервисом TaskManager
      *
      * @var string
      */
     private string $taskGuid;
 
-    /**
+    /** OLD
      * Название сервиса, который отправил объект.
      * Название берется из списка @\Kubersoftware\Enum\ServicesListEnum
      *
@@ -20,7 +28,7 @@ class InsertDto
      */
     private string $serviceName;
 
-    /**
+    /** OLD
      * Время создания объекта
      *
      * @var DateTime
