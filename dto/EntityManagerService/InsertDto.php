@@ -18,7 +18,7 @@ class InsertDto
      *
      * @var string
      */
-    private string $taskGuid;
+    private string $taskGuid = 'old';
 
     /** OLD
      * Название сервиса, который отправил объект.
@@ -26,7 +26,7 @@ class InsertDto
      *
      * @var string
      */
-    private string $serviceName;
+    private string $serviceName = 'old';
 
     /** OLD
      * Время создания объекта
