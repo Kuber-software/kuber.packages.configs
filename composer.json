@@ -11,15 +11,10 @@
   "minimum-stability": "stable",
   "autoload": {
     "psr-4": {
-      "Kubersoftware\\Dto\\CalculatorService\\": "dto/CalculatorService/",
-      "Kubersoftware\\Dto\\SessionService\\": "dto/SessionService/",
-      "Kubersoftware\\Dto\\EntityManagerService\\": "dto/EntityManagerService/",
-      "Kubersoftware\\Dto\\ErrorService\\": "dto/ErrorService/",
-      "Kubersoftware\\Dto\\TaskManagerService\\": "dto/TaskManagerService/",
-      "Kubersoftware\\Utils\\Security\\": "utils/security/",
-      "Kubersoftware\\Enum\\": "enum/",
-      "Kubersoftware\\Enum\\EntityManagerService\\": "enum/EntityManagerService/"
-
+      "Kubersoftware\\Microservices\\": "microservices/",
+      "Kubersoftware\\Microservices\\ApiDocMicroservice\\Dto\\": "microservices/ApiDocMicroservice/Dto/",
+      "Kubersoftware\\Microservices\\KubeNosqlDatabaseClusterMicroservice\\Enum\\": "microservices/KubeNosqlDatabaseClusterMicroservice/Enum/",
+      "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/"
     }
   },
   "require": {
