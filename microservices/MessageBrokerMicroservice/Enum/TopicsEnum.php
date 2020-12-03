@@ -3,8 +3,14 @@
 namespace Kubersoftware\Microservices\MessageBrokerMicroservice\Enum;
 
 
-class TopicsEnum
+use SplEnum;
+
+class TopicsEnum extends SplEnum
 {
+
+    public const __default = 'qDefault';
+
+
     /**
      * Очередь для отправки результатов
      */

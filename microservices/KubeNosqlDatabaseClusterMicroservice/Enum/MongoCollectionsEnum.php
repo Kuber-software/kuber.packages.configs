@@ -3,12 +3,20 @@
 namespace Kubersoftware\Microservices\KubeNosqlDatabaseClusterMicroservice\Enum;
 
 use Kubersoftware\Microservices\ServicesListEnum;
+use SplEnum;
 
 /**
  * Class MongoCollectionsEnum
  */
-class MongoCollectionsEnum
+class MongoCollectionsEnum extends SplEnum
 {
+    private string $service;
+
+    private string $collection;
+
+
+    public const __default = 'default_collection';
+
     /**
      * Коллекция хранения ключей сессий пользователей для микросервиса Security
      */
@@ -19,60 +27,33 @@ class MongoCollectionsEnum
      */
     public const TASKMANAGER_COLLECTION = "tasks";
 
-    /**
-     * Название микросервиса
-     * @var ServicesListEnum
-     */
-    private ServicesListEnum $service;
-
-    /**
-     * Название коллекции
-     * Получаем из констант класса @MongoCollectionsEnum
-     * @var string
-     */
-    private string $collection;
 
     /**
      * @return ServicesListEnum
      */
-    public function getService(): ServicesListEnum
+    public function getServiceCollectionName(): string
     {
-        return $this->service;
+        return $this->service . '.' . $this->collection;
+    }
+
+    /**
+     * @param MongoCollectionsEnum $collection
+     * @return string
+     */
+    public function setCollection(MongoCollectionsEnum $collection): string
+    {
+        $this->collection = (new self($collection));
+        return $this;
     }
 
     /**
      * @param ServicesListEnum $service
-     * @return MongoCollectionsEnum
+     * @return ServicesListEnum
      */
-    public function setService(ServicesListEnum $service): MongoCollectionsEnum
+    public function setService(ServicesListEnum $service): string
     {
-        $this->service = $service;
+        $this->service = (new ServicesListEnum($service));
+
         return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getCollection(): string
-    {
-        return $this->collection;
-    }
-
-    /**
-     * @param string $collection
-     * @return MongoCollectionsEnum
-     */
-    public function setCollection(string $collection): MongoCollectionsEnum
-    {
-        $this->collection = $collection;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function generateCollectionName(): string
-    {
-        return $this->getService()->getServiceName() . '.' . $this->getCollection();
     }
 }

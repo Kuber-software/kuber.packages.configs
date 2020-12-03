@@ -3,8 +3,12 @@
 namespace Kubersoftware\Microservices\TaskManagerMicroservice\Enum;
 
 
-class TaskStatusesEnum
+use SplEnum;
+
+class TaskStatusesEnum extends SplEnum
 {
+    public const __default = self::WAIT_STATUS;
+
     /**
      *
      */
