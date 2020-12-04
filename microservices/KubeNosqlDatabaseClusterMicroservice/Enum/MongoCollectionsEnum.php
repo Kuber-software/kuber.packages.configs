@@ -3,12 +3,12 @@
 namespace Kubersoftware\Microservices\KubeNosqlDatabaseClusterMicroservice\Enum;
 
 use Kubersoftware\Microservices\ServicesListEnum;
-use SplEnum;
+use MyCLabs\Enum\Enum;
 
 /**
  * Class MongoCollectionsEnum
  */
-class MongoCollectionsEnum extends SplEnum
+class MongoCollectionsEnum extends Enum
 {
     private string $service;
 

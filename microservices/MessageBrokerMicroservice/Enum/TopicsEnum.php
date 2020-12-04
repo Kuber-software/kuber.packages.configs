@@ -2,14 +2,10 @@
 
 namespace Kubersoftware\Microservices\MessageBrokerMicroservice\Enum;
 
+use MyCLabs\Enum\Enum;
 
-use SplEnum;
-
-class TopicsEnum extends SplEnum
+class TopicsEnum extends Enum
 {
-
-    public const __default = 'qDefault';
-
 
     /**
      * Очередь для отправки результатов

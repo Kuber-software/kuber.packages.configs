@@ -2,10 +2,9 @@
 
 namespace Kubersoftware\Microservices\TaskManagerMicroservice\Enum;
 
+use MyCLabs\Enum\Enum;
 
-use SplEnum;
-
-class TaskListEnum extends SplEnum
+class TaskListEnum extends Enum
 {
     public const __default = 'default_task';
 

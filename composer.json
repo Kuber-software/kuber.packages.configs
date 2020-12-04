@@ -16,5 +16,8 @@
       "Kubersoftware\\Microservices\\KubeNosqlDatabaseClusterMicroservice\\Enum\\": "microservices/KubeNosqlDatabaseClusterMicroservice/Enum/",
       "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/"
     }
+  },
+  "require": {
+    "myclabs/php-enum": "^1.7"
   }
 }
