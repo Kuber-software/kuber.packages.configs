@@ -16,9 +16,5 @@
       "Kubersoftware\\Microservices\\KubeNosqlDatabaseClusterMicroservice\\Enum\\": "microservices/KubeNosqlDatabaseClusterMicroservice/Enum/",
       "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/"
     }
-  },
-  "require": {
-    "ext-openssl": "*",
-    "ext-spltype": "*"
   }
 }
