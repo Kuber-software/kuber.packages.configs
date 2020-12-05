@@ -3,20 +3,12 @@
 namespace Kubersoftware\Microservices\KubeNosqlDatabaseClusterMicroservice\Enum;
 
 use Kubersoftware\Microservices\ServicesListEnum;
-use MyCLabs\Enum\Enum;
 
 /**
  * Class MongoCollectionsEnum
  */
-class MongoCollectionsEnum extends Enum
+class MongoCollectionsEnum
 {
-    private string $service;
-
-    private string $collection;
-
-
-    public const __default = 'default_collection';
-
     /**
      * Коллекция хранения ключей сессий пользователей для микросервиса Security
      */
@@ -29,31 +21,57 @@ class MongoCollectionsEnum extends Enum
 
 
     /**
-     * @return ServicesListEnum
+     * @var ServicesListEnum
      */
-    public function getServiceCollectionName(): string
-    {
-        return $this->service . '.' . $this->collection;
-    }
+    private ServicesListEnum $service;
 
     /**
-     * @param MongoCollectionsEnum $collection
-     * @return string
+     * @var string
      */
-    public function setCollection(MongoCollectionsEnum $collection): string
+    private string $collection;
+
+
+    /**
+     * @return ServicesListEnum
+     */
+    public function getService(): ServicesListEnum
     {
-        $this->collection = (new self($collection));
-        return $this;
+        return $this->service;
     }
 
     /**
      * @param ServicesListEnum $service
-     * @return ServicesListEnum
+     * @return MongoCollectionsEnum
      */
-    public function setService(ServicesListEnum $service): string
+    public function setService(ServicesListEnum $service): MongoCollectionsEnum
     {
-        $this->service = (new ServicesListEnum($service));
-
+        $this->service = $service;
         return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getCollection(): string
+    {
+        return $this->collection;
+    }
+
+    /**
+     * @param string $collection
+     * @return MongoCollectionsEnum
+     */
+    public function setCollection(string $collection): MongoCollectionsEnum
+    {
+        $this->collection = $collection;
+        return $this;
+    }
+
+    /**
+     * @return string
+     */
+    public function getServiceCollection(): string
+    {
+        return $this->service->getServiceName() . '.' . $this->collection;
     }
 }

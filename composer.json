@@ -14,10 +14,9 @@
       "Kubersoftware\\Microservices\\": "microservices/",
       "Kubersoftware\\Microservices\\ApiDocMicroservice\\Dto\\": "microservices/ApiDocMicroservice/Dto/",
       "Kubersoftware\\Microservices\\KubeNosqlDatabaseClusterMicroservice\\Enum\\": "microservices/KubeNosqlDatabaseClusterMicroservice/Enum/",
-      "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/"
+      "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/",
+      "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Dto\\": "microservices/EntityManagerMicroservice/Dto/",
+      "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Enum\\": "microservices/EntityManagerMicroservice/Enum/"
     }
-  },
-  "require": {
-    "myclabs/php-enum": "^1.7"
   }
 }

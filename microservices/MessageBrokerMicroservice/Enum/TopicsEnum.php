@@ -2,9 +2,8 @@
 
 namespace Kubersoftware\Microservices\MessageBrokerMicroservice\Enum;
 
-use MyCLabs\Enum\Enum;
 
-class TopicsEnum extends Enum
+class TopicsEnum
 {
 
     /**

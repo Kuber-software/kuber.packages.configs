@@ -2,7 +2,6 @@
 
 namespace Kubersoftware\Microservices;
 
-use MyCLabs\Enum\Enum;
 
 /**
  * Class ServicesListEnum
@@ -35,6 +34,8 @@ class ServicesListEnum
     }
 
     /**
+     * Устанавливаем значение из констант класса @ServicesListEnum
+     *
      * @param string $serviceName
      * @return ServicesListEnum
      */

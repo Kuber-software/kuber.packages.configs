@@ -2,9 +2,7 @@
 
 namespace Kubersoftware\Microservices\TaskManagerMicroservice\Enum;
 
-use MyCLabs\Enum\Enum;
-
-class TaskStatusesEnum extends Enum
+class TaskStatusesEnum
 {
     /**
      *
@@ -25,4 +23,24 @@ class TaskStatusesEnum extends Enum
      *
      */
     public const DONE_STATUS = "done";
+
+    private string $taskStatus;
+
+    /**
+     * @return string
+     */
+    public function getTaskStatus(): string
+    {
+        return $this->taskStatus;
+    }
+
+    /**
+     * @param string $taskStatus
+     * @return TaskStatusesEnum
+     */
+    public function setTaskStatus(string $taskStatus): TaskStatusesEnum
+    {
+        $this->taskStatus = $taskStatus;
+        return $this;
+    }
 }
