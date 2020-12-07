@@ -6,13 +6,15 @@ namespace Kubersoftware\Microservices\LoggerMicroservice\Enum;
 
 class RoutingKeysEnum
 {
+    public const DEFAULT = 'default';
+
     public const LOGGER_ERRORS = 'errors';
 
 
     /**
      * @var string
      */
-    private string $routingKey;
+    private string $routingKey = self::DEFAULT;
 
     /**
      * @return string
