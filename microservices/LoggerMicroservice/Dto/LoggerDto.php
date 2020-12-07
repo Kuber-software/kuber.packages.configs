@@ -22,6 +22,12 @@ class LoggerDto
      */
     private string $errorMessage;
 
+    /**
+     * Объект, послуживший причиной ошибки
+     * @var object
+     */
+    private object $case;
+
 
     /**
      * @return MicroservicesListEnum
@@ -74,6 +80,24 @@ class LoggerDto
     public function setErrorMessage(string $errorMessage): LoggerDto
     {
         $this->errorMessage = $errorMessage;
+        return $this;
+    }
+
+    /**
+     * @return object
+     */
+    public function getCase(): object
+    {
+        return $this->case;
+    }
+
+    /**
+     * @param object $case
+     * @return LoggerDto
+     */
+    public function setCase(object $case): LoggerDto
+    {
+        $this->case = $case;
         return $this;
     }
 }
