@@ -11,10 +11,6 @@ class TopicsEnum
      */
     public const RESULTS_TOPIC = "qResult";
 
-    /**
-     * Очередь для отправки ошибок
-     */
-    public const ERRORS_TOPIC = "qError";
 
     /**
      * Очередь для получения задач для микросервиса EntityManager
@@ -40,6 +36,10 @@ class TopicsEnum
     /**
      * ACTUAL. Очередь для отправки сообщений в микросервис ApiDoc
      */
-    public const APIDOC_TOPIC = 'qApiDoc';
+    public const APIDOC_TOPIC = 'ApiDoc';
 
+    /**
+     * Actual Очередь для отправки ошибок
+     */
+    public const LOGGER_TOPIC = "Logger";
 }

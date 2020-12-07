@@ -12,6 +12,8 @@ class RoutingKeysEnum
      */
     public const ENTITY_MANAGER_INSERT_OBJECT = 'insert';
 
+    public const LOGGER_ERRORS = 'errors';
+
 
     /**
      * @var string
