@@ -38,7 +38,7 @@ class TopicsEnum
     public const CALULATOR_TOPIC = "qCalculator";
 
     /**
-     * Очередь для отправки сообщений в микросервис ApiDoc
+     * ACTUAL. Очередь для отправки сообщений в микросервис ApiDoc
      */
     public const APIDOC_TOPIC = 'qApiDoc';
 

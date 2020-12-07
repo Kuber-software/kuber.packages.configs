@@ -4,11 +4,11 @@ namespace Kubersoftware\Microservices\EntityManagerMicroservice\Dto;
 
 use DateTime;
 use Kubersoftware\Microservices\EntityManagerMicroservice\Enum\InsertObjectEnum;
-use Kubersoftware\Microservices\ServicesListEnum;
+use Kubersoftware\Microservices\MicroservicesListEnum;
 
 class InsertDto
 {
-    private ServicesListEnum $service;
+    private MicroservicesListEnum $microservice;
 
     private DateTime $createdAt;
 
@@ -17,20 +17,38 @@ class InsertDto
     private string $insertObjectJson;
 
     /**
-     * @return ServicesListEnum
+     * @return MicroservicesListEnum
      */
-    public function getService(): ServicesListEnum
+    public function getMicroservice(): MicroservicesListEnum
     {
-        return $this->service;
+        return $this->microservice;
     }
 
     /**
-     * @param ServicesListEnum $service
+     * @param MicroservicesListEnum $microservice
      * @return InsertDto
      */
-    public function setService(ServicesListEnum $service): InsertDto
+    public function setMicroservice(MicroservicesListEnum $microservice): InsertDto
     {
-        $this->service = $service;
+        $this->microservice = $microservice;
+        return $this;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getCreatedAt(): DateTime
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param DateTime $createdAt
+     * @return InsertDto
+     */
+    public function setCreatedAt(DateTime $createdAt): InsertDto
+    {
+        $this->createdAt = $createdAt;
         return $this;
     }
 
@@ -67,24 +85,6 @@ class InsertDto
     public function setInsertObjectJson(string $insertObjectJson): InsertDto
     {
         $this->insertObjectJson = $insertObjectJson;
-        return $this;
-    }
-
-    /**
-     * @return DateTime
-     */
-    public function getCreatedAt(): DateTime
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * @param DateTime $createdAt
-     * @return InsertDto
-     */
-    public function setCreatedAt(DateTime $createdAt): InsertDto
-    {
-        $this->createdAt = $createdAt;
         return $this;
     }
 }

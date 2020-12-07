@@ -2,14 +2,14 @@
 namespace Kubersoftware\Microservices\ApiDocMicroservice\Dto;
 
 use DateTime;
-use Kubersoftware\Microservices\ServicesListEnum;
+use Kubersoftware\Microservices\MicroservicesListEnum;
 
 class ApiDocDto
 {
     /**
      * Название сервиса, который отправляет документацию
      */
-    private ServicesListEnum $serviceName;
+    private MicroservicesListEnum $serviceName;
 
     /**
      * Дата отправки документации.
@@ -28,18 +28,18 @@ class ApiDocDto
 
 
     /**
-     * @return ServicesListEnum
+     * @return MicroservicesListEnum
      */
-    public function getServiceName(): ServicesListEnum
+    public function getServiceName(): MicroservicesListEnum
     {
         return $this->serviceName;
     }
 
     /**
-     * @param ServicesListEnum $serviceName
+     * @param MicroservicesListEnum $serviceName
      * @return ApiDocDto
      */
-    public function setServiceName(ServicesListEnum $serviceName): ApiDocDto
+    public function setServiceName(MicroservicesListEnum $serviceName): ApiDocDto
     {
         $this->serviceName = $serviceName;
         return $this;

@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kubersoftware\Microservices\TaskManagerService\Dto;
+namespace Kubersoftware\Microservices\TaskManagerMicroservice\Dto;
 
 
 use DateTime;

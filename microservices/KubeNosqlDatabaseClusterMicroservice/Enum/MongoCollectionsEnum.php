@@ -2,7 +2,7 @@
 
 namespace Kubersoftware\Microservices\KubeNosqlDatabaseClusterMicroservice\Enum;
 
-use Kubersoftware\Microservices\ServicesListEnum;
+use Kubersoftware\Microservices\MicroservicesListEnum;
 
 /**
  * Class MongoCollectionsEnum
@@ -21,9 +21,9 @@ class MongoCollectionsEnum
 
 
     /**
-     * @var ServicesListEnum
+     * @var MicroservicesListEnum
      */
-    private ServicesListEnum $service;
+    private MicroservicesListEnum $service;
 
     /**
      * @var string
@@ -32,18 +32,18 @@ class MongoCollectionsEnum
 
 
     /**
-     * @return ServicesListEnum
+     * @return MicroservicesListEnum
      */
-    public function getService(): ServicesListEnum
+    public function getService(): MicroservicesListEnum
     {
         return $this->service;
     }
 
     /**
-     * @param ServicesListEnum $service
+     * @param MicroservicesListEnum $service
      * @return MongoCollectionsEnum
      */
-    public function setService(ServicesListEnum $service): MongoCollectionsEnum
+    public function setService(MicroservicesListEnum $service): MongoCollectionsEnum
     {
         $this->service = $service;
         return $this;
@@ -72,6 +72,6 @@ class MongoCollectionsEnum
      */
     public function getServiceCollection(): string
     {
-        return $this->service->getServiceName() . '.' . $this->collection;
+        return $this->service->getMicroserviceName() . '.' . $this->collection;
     }
 }
