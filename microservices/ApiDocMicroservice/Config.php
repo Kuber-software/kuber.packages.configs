@@ -1,7 +1,5 @@
 <?php
-
-
-namespace Kubersoftware\Microservices\LoggerMicroservice;
+namespace Kubersoftware\Microservices\ApiDocMicroservice;
 
 
 class Config
