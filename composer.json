@@ -16,7 +16,9 @@
       "Kubersoftware\\Microservices\\KubeNosqlDatabaseClusterMicroservice\\Enum\\": "microservices/KubeNosqlDatabaseClusterMicroservice/Enum/",
       "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/",
       "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Dto\\": "microservices/EntityManagerMicroservice/Dto/",
-      "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Enum\\": "microservices/EntityManagerMicroservice/Enum/"
+      "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Enum\\": "microservices/EntityManagerMicroservice/Enum/",
+      "Kubersoftware\\Microservices\\LoggerMicroservice\\Dto\\": "microservices/LoggerMicroservice/Dto/",
+      "Kubersoftware\\Microservices\\LoggerMicroservice\\Enum\\": "microservices/LoggerMicroservice/Enum/"
     }
   }
 }
