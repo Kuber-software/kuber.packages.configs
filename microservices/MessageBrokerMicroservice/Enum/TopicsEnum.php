@@ -11,12 +11,6 @@ class TopicsEnum
      */
     public const RESULTS_TOPIC = "qResult";
 
-
-    /**
-     * Очередь для получения задач для микросервиса EntityManager
-     */
-    public const ENTITY_MANAGER_TOPIC = "qEntityManager";
-
     /**
      * OLD Очередь отправки задач для микросервиса EntityManager
      * @\Kubersoftware\Dto\EntityManagerService\InsertDto
@@ -24,14 +18,15 @@ class TopicsEnum
     public const ENTITY_MANAGER_INSERT_TOPIC = "qEntityManager_InsertDto";
 
     /**
-     *
-     */
-    public const TASKMANAGER_TOPIC = "qTaskManager";
-
-    /**
      * OLD
      */
     public const CALULATOR_TOPIC = "qCalculator";
+
+
+    /**
+     * ACTUAL
+     */
+    public const TASK_MANAGER_TOPIC = "TaskManager";
 
     /**
      * ACTUAL. Очередь для отправки сообщений в микросервис ApiDoc
@@ -39,7 +34,12 @@ class TopicsEnum
     public const APIDOC_TOPIC = 'ApiDoc';
 
     /**
-     * Actual Очередь для отправки ошибок
+     * ACTUAL Очередь для отправки ошибок
      */
     public const LOGGER_TOPIC = "Logger";
+
+    /**
+     * ACTUAL Очередь для получения задач для микросервиса EntityManager
+     */
+    public const ENTITY_MANAGER_TOPIC = "EntityManager";
 }
