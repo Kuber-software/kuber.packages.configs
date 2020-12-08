@@ -25,6 +25,7 @@ class MicroservicesListEnum
 
     public string $microserviceName;
 
+
     /**
      * @return string
      */
@@ -34,7 +35,7 @@ class MicroservicesListEnum
     }
 
     /**
-     * Устанавливаем значение из констант класса @MicroservicesListEnum
+     * Устанавливаем значение из констант текущего класса
      *
      * @param string $microserviceName
      * @return MicroservicesListEnum

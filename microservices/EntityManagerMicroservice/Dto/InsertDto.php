@@ -3,6 +3,7 @@
 namespace Kubersoftware\Microservices\EntityManagerMicroservice\Dto;
 
 use DateTime;
+use Kubersoftware\Microservices\EntityManagerMicroservice\Enum\EntityEnum;
 use Kubersoftware\Microservices\EntityManagerMicroservice\Enum\InsertObjectEnum;
 use Kubersoftware\Microservices\MicroservicesListEnum;
 
@@ -12,7 +13,7 @@ class InsertDto
 
     private DateTime $createdAt;
 
-    private InsertObjectEnum $insertObjectName;
+    private EntityEnum $insertObjectName;
 
     private string $insertObjectJson;
 
@@ -53,9 +54,9 @@ class InsertDto
     }
 
     /**
-     * @return InsertObjectEnum
+     * @return EntityEnum
      */
-    public function getInsertObjectName(): InsertObjectEnum
+    public function getInsertObjectName(): EntityEnum
     {
         return $this->insertObjectName;
     }

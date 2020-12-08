@@ -4,45 +4,44 @@ namespace Kubersoftware\Microservices\EntityManagerMicroservice\Enum;
 
 class InsertObjectEnum
 {
-    public const SECURITY_USER_ENTITY = 'App\Entity\Security\UserEntity';
+    private EntityEnum $entityName;
 
-    private string $objectName;
+    private string $entityValue;
 
-    private string $objectValue;
 
     /**
-     * @return string
+     * @return EntityEnum
      */
-    public function getObjectName(): string
+    public function getEntityName(): EntityEnum
     {
-        return $this->objectName;
+        return $this->entityName;
     }
 
     /**
-     * @param string $objectName
+     * @param EntityEnum $entityName
      * @return InsertObjectEnum
      */
-    public function setObjectName(string $objectName): InsertObjectEnum
+    public function setEntityName(EntityEnum $entityName): InsertObjectEnum
     {
-        $this->objectName = $objectName;
+        $this->entityName = $entityName;
         return $this;
     }
 
     /**
      * @return string
      */
-    public function getObjectValue(): string
+    public function getEntityValue(): string
     {
-        return $this->objectValue;
+        return $this->entityValue;
     }
 
     /**
-     * @param string $objectValue
+     * @param string $entityValue
      * @return InsertObjectEnum
      */
-    public function setObjectValue(string $objectValue): InsertObjectEnum
+    public function setEntityValue(string $entityValue): InsertObjectEnum
     {
-        $this->objectValue = $objectValue;
+        $this->entityValue = $entityValue;
         return $this;
     }
 }

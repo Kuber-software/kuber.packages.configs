@@ -13,6 +13,8 @@ class SelectDto
 
     private DateTime $createdAt;
 
+
+
     private array $criteria;
 
 }
