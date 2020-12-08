@@ -28,7 +28,7 @@ class MicroservicesListEnum
      *
      * @var string
      */
-    public string $microserviceName;
+    private string $microserviceName;
 
 
     /**
