@@ -30,7 +30,9 @@ class LoggerDto extends AbstractLoggerDto
 
 
     /**
-     * Сообщение об ошибке, берем из констант класса @LoggerDto
+     * Сообщение об ошибке, берем из констант класса
+     * Kubersoftware\Microservices\ApiDocMicroservice\Dto\LoggerDto
+     *
      * @var string
      */
     private string $errorMessage = self::DEFAULT;

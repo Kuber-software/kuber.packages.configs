@@ -10,6 +10,8 @@ use Kubersoftware\Microservices\MicroservicesListEnum;
 abstract class AbstractLoggerDto
 {
     /**
+     * Имя микросервиса, берем из констант класса Kubersoftware\Microservices\MicroservicesListEnum
+     *
      * @var MicroservicesListEnum
      */
     private MicroservicesListEnum $microservice;

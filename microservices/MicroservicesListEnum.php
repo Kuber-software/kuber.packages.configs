@@ -23,6 +23,11 @@ class MicroservicesListEnum
     public const MICROSERVICE_USERS = "Users";
     public const MICROSERVICE_VALIDATOR = "Validator";
 
+    /**
+     * Имя микросервиса из констант класса Kubersoftware\Microservices\MicroservicesListEnum
+     *
+     * @var string
+     */
     public string $microserviceName;
 
 
