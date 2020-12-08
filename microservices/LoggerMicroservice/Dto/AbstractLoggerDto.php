@@ -14,18 +14,18 @@ abstract class AbstractLoggerDto
      *
      * @var MicroservicesListEnum
      */
-    private MicroservicesListEnum $microservice;
+    protected MicroservicesListEnum $microservice;
 
     /**
      * @var DateTime
      */
-    private DateTime $createdAt;
+    protected DateTime $createdAt;
 
 
     /**
      * @var Exception
      */
-    private Exception $exception;
+    protected Exception $exception;
 
 
     /**

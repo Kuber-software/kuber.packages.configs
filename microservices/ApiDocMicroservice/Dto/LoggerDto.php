@@ -4,7 +4,10 @@
 namespace Kubersoftware\Microservices\ApiDocMicroservice\Dto;
 
 
+use DateTime;
+use Exception;
 use Kubersoftware\Microservices\LoggerMicroservice\Dto\AbstractLoggerDto;
+use Kubersoftware\Microservices\MicroservicesListEnum;
 
 class LoggerDto extends AbstractLoggerDto
 {
@@ -77,6 +80,60 @@ class LoggerDto extends AbstractLoggerDto
     public function setObject(object $object): LoggerDto
     {
         $this->object = $object;
+        return $this;
+    }
+
+    /**
+     * @return MicroservicesListEnum
+     */
+    public function getMicroservice(): MicroservicesListEnum
+    {
+        return $this->microservice;
+    }
+
+    /**
+     * @param MicroservicesListEnum $microservice
+     * @return LoggerDto
+     */
+    public function setMicroservice(MicroservicesListEnum $microservice): LoggerDto
+    {
+        $this->microservice = $microservice;
+        return $this;
+    }
+
+    /**
+     * @return DateTime
+     */
+    public function getCreatedAt(): DateTime
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @param DateTime $createdAt
+     * @return LoggerDto
+     */
+    public function setCreatedAt(DateTime $createdAt): LoggerDto
+    {
+        $this->createdAt = $createdAt;
+        return $this;
+    }
+
+    /**
+     * @return Exception
+     */
+    public function getException(): Exception
+    {
+        return $this->exception;
+    }
+
+    /**
+     * @param Exception $exception
+     * @return LoggerDto
+     */
+    public function setException(Exception $exception): LoggerDto
+    {
+        $this->exception = $exception;
         return $this;
     }
 }

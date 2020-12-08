@@ -21,28 +21,28 @@ abstract class AbstractEntityManagerDto
      *
      * @var MicroservicesListEnum
      */
-    private MicroservicesListEnum $microservice;
+    protected MicroservicesListEnum $microservice;
 
     /**
      * Дата и время создания объекта
      *
      * @var DateTime
      */
-    private DateTime $createdAt;
+    protected DateTime $createdAt;
 
     /**
      * Имя объекта Entity из констант класса @EntityManagerDto
      *
      * @var string
      */
-    private string $entityName;
+    protected string $entityName;
 
     /**
      * Объект Entity сериализованный в json
      *
      * @var string
      */
-    private string $entityJsonValue;
+    protected string $entityJsonValue;
 
 
 
