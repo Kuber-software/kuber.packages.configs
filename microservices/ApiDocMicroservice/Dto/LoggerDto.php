@@ -39,7 +39,7 @@ class LoggerDto extends AbstractLoggerDto
      * Объект, приведший к ошибке
      * @var object
      */
-    private object $apiDocDto;
+    private object $object;
 
 
     /**
@@ -63,18 +63,18 @@ class LoggerDto extends AbstractLoggerDto
     /**
      * @return object
      */
-    public function getApiDocDto(): object
+    public function getObject(): object
     {
-        return $this->apiDocDto;
+        return $this->object;
     }
 
     /**
-     * @param object $apiDocDto
+     * @param object $object
      * @return LoggerDto
      */
-    public function setApiDocDto(object $apiDocDto): LoggerDto
+    public function setObject(object $object): LoggerDto
     {
-        $this->apiDocDto = $apiDocDto;
+        $this->object = $object;
         return $this;
     }
 }
