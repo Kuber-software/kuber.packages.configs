@@ -12,9 +12,7 @@ class SelectDto
     private MicroservicesListEnum $microservice;
 
     private DateTime $createdAt;
-
-
-
+    
     private array $criteria;
 
 }
