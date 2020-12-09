@@ -7,6 +7,14 @@ namespace Kubersoftware\Microservices\EntityManagerMicroservice\Dto;
 use DateTime;
 use Kubersoftware\Microservices\MicroservicesListEnum;
 
+/**
+ * @IgnoreAnnotation("MicroservicesListEnum")
+ * @IgnoreAnnotation("EntityManagerDto")
+ *
+ * Class AbstractEntityManagerDto
+ * @package Kubersoftware\Microservices\EntityManagerMicroservice\Dto
+ *
+ */
 abstract class AbstractEntityManagerDto
 {
     public const USER_ENTITY = 'App\Entity\Security\UserEntity';

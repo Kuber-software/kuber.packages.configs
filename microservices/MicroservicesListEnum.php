@@ -4,9 +4,10 @@ namespace Kubersoftware\Microservices;
 
 
 /**
+ * @IgnoreAnnotation("MicroservicesListEnum")
+ *
  * Class ServicesListEnum
  * Список всех микросервисов kubersoftware
- *
  * @package Kubersoftware\Microservices
  * @link https://www.notion.so/kubersoftware/d03c6751998644aabc9b2bce2771eb62?v=cd2372ef78b345f49c3a11d57c97dcb3
  */
@@ -24,7 +25,7 @@ class MicroservicesListEnum
     public const MICROSERVICE_VALIDATOR = "Validator";
 
     /**
-     * Имя микросервиса из констант класса Kubersoftware\Microservices\MicroservicesListEnum
+     * Имя микросервиса из констант класса @MicroservicesListEnum
      *
      * @var string
      */
