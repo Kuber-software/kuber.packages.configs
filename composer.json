@@ -19,7 +19,8 @@
       "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Dto\\": "microservices/EntityManagerMicroservice/Dto/",
       "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Enum\\": "microservices/EntityManagerMicroservice/Enum/",
       "Kubersoftware\\Microservices\\LoggerMicroservice\\Dto\\": "microservices/LoggerMicroservice/Dto/",
-      "Kubersoftware\\Microservices\\LoggerMicroservice\\Enum\\": "microservices/LoggerMicroservice/Enum/"
+      "Kubersoftware\\Microservices\\LoggerMicroservice\\Enum\\": "microservices/LoggerMicroservice/Enum/",
+      "Kubersoftware\\Microservices\\ScoringMicroservice\\": "microservices/ScoringMicroservice/"
     }
   }
 }
