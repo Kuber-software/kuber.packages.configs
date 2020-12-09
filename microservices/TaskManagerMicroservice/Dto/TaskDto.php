@@ -5,7 +5,16 @@ namespace Kubersoftware\Microservices\TaskManagerMicroservice\Dto;
 
 
 use DateTime;
+use Kubersoftware\Microservices\MicroservicesListEnum;
 
+
+/**
+ * @IgnoreAnnotation("MicroservicesListEnum")
+ * @IgnoreAnnotation("EntityManagerDto")
+ *
+ * Class TaskDto
+ * @package Kubersoftware\Microservices\TaskManagerMicroservice\Dto
+ */
 class TaskDto
 {
     /**
@@ -16,12 +25,11 @@ class TaskDto
     private string $taskGuid;
 
     /**
-     * Название сервиса, который отправил объект.
-     * Название берется из списка @\Kubersoftware\Enum\ServicesListEnum
+     * Имя микросервиса из констант класса @MicroservicesListEnum
      *
-     * @var string
+     * @var MicroservicesListEnum
      */
-    private string $serviceName;
+    private MicroservicesListEnum $microservice;
 
     /**
      * Время создания объекта/задания
@@ -39,9 +47,10 @@ class TaskDto
 
     /**
      * Результат выполнения задачи (выставляется после отработки задания)
+     * Может быть ответ
      *
      */
-    private string $result = '';
+    private string $response = '';
 
 
     /**
@@ -63,20 +72,20 @@ class TaskDto
     }
 
     /**
-     * @return string
+     * @return MicroservicesListEnum
      */
-    public function getServiceName(): string
+    public function getMicroservice(): MicroservicesListEnum
     {
-        return $this->serviceName;
+        return $this->microservice;
     }
 
     /**
-     * @param string $serviceName
+     * @param MicroservicesListEnum $microservice
      * @return TaskDto
      */
-    public function setServiceName(string $serviceName): TaskDto
+    public function setMicroservice(MicroservicesListEnum $microservice): TaskDto
     {
-        $this->serviceName = $serviceName;
+        $this->microservice = $microservice;
         return $this;
     }
 
@@ -119,18 +128,18 @@ class TaskDto
     /**
      * @return string
      */
-    public function getResult(): string
+    public function getResponse(): string
     {
-        return $this->result;
+        return $this->response;
     }
 
     /**
-     * @param string $result
+     * @param string $response
      * @return TaskDto
      */
-    public function setResult(string $result): TaskDto
+    public function setResponse(string $response): TaskDto
     {
-        $this->result = $result;
+        $this->response = $response;
         return $this;
     }
 }

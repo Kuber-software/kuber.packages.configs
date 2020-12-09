@@ -6,6 +6,7 @@ namespace Kubersoftware\Microservices\EntityManagerMicroservice\Dto;
 
 use DateTime;
 use Kubersoftware\Microservices\MicroservicesListEnum;
+use Kubersoftware\Microservices\TaskManagerMicroservice\Dto\TaskDto;
 
 /**
  * @IgnoreAnnotation("MicroservicesListEnum")
@@ -23,21 +24,6 @@ abstract class AbstractEntityManagerDto
 
     public const MOVERS_TEST_ENTITY = 'App\Entity\MoversTest';
 
-
-    /**
-     * Имя микросервиса из констант класса @MicroservicesListEnum
-     *
-     * @var MicroservicesListEnum
-     */
-    protected MicroservicesListEnum $microservice;
-
-    /**
-     * Дата и время создания объекта
-     *
-     * @var DateTime
-     */
-    protected DateTime $createdAt;
-
     /**
      * Имя объекта Entity из констант класса @EntityManagerDto
      *
@@ -53,5 +39,6 @@ abstract class AbstractEntityManagerDto
     protected string $entityJsonValue;
 
 
+    protected TaskDto $taskDto;
 
 }
