@@ -21,7 +21,7 @@ class MicroservicesListEnum
     public const MICROSERVICE_SECURITY = "Security";
     public const MICROSERVICE_TASK_MANAGER = "TaskManager";
     public const MICROSERVICE_USERS = "Users";
-    public const MICROSERVICE_VALIDATOR = "Validator";
+    public const MICROSERVICE_SCORING = "Scoring";
 
     /**
      * Имя микросервиса из констант класса Kubersoftware\Microservices\MicroservicesListEnum
