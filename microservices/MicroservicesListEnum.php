@@ -4,7 +4,7 @@ namespace Kubersoftware\Microservices;
 
 
 /**
- * @IgnoreAnnotation("MicroservicesListEnum")
+ * IgnoreAnnotation("MicroservicesListEnum")
  *
  * Class ServicesListEnum
  * Список всех микросервисов kubersoftware
