@@ -17,6 +17,7 @@ class SelectDto extends AbstractEntityManagerDto
      */
     private array $criteria;
 
+
     /**
      * @return array
      */
@@ -32,78 +33,6 @@ class SelectDto extends AbstractEntityManagerDto
     public function setCriteria(array $criteria): SelectDto
     {
         $this->criteria = $criteria;
-        return $this;
-    }
-
-    /**
-     * @return MicroservicesListEnum
-     */
-    public function getMicroservice(): MicroservicesListEnum
-    {
-        return $this->microservice;
-    }
-
-    /**
-     * @param MicroservicesListEnum $microservice
-     * @return SelectDto
-     */
-    public function setMicroservice(MicroservicesListEnum $microservice): SelectDto
-    {
-        $this->microservice = $microservice;
-        return $this;
-    }
-
-    /**
-     * @return DateTime
-     */
-    public function getCreatedAt(): DateTime
-    {
-        return $this->createdAt;
-    }
-
-    /**
-     * @param DateTime $createdAt
-     * @return SelectDto
-     */
-    public function setCreatedAt(DateTime $createdAt): SelectDto
-    {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEntityName(): string
-    {
-        return $this->entityName;
-    }
-
-    /**
-     * @param string $entityName
-     * @return SelectDto
-     */
-    public function setEntityName(string $entityName): SelectDto
-    {
-        $this->entityName = $entityName;
-        return $this;
-    }
-
-    /**
-     * @return string
-     */
-    public function getEntityJsonValue(): string
-    {
-        return $this->entityJsonValue;
-    }
-
-    /**
-     * @param string $entityJsonValue
-     * @return SelectDto
-     */
-    public function setEntityJsonValue(string $entityJsonValue): SelectDto
-    {
-        $this->entityJsonValue = $entityJsonValue;
         return $this;
     }
 }

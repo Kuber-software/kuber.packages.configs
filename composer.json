@@ -22,8 +22,8 @@
       "Kubersoftware\\Microservices\\LoggerMicroservice\\Enum\\": "microservices/LoggerMicroservice/Enum/",
       "Kubersoftware\\Microservices\\ScoringMicroservice\\": "microservices/ScoringMicroservice/",
       "Kubersoftware\\Microservices\\TaskManagerMicroservice\\": "microservices/TaskManagerMicroservice/",
-      "Kubersoftware\\Microservices\\TaskManagerMicroservice\\Enum\\": "microservices/TaskManagerMicroservice/Enum",
-      "Kubersoftware\\Microservices\\TaskManagerMicroservice\\Dto\\": "microservices/TaskManagerMicroservice/Dto"
+      "Kubersoftware\\Microservices\\TaskManagerMicroservice\\Enum\\": "microservices/TaskManagerMicroservice/Enum/",
+      "Kubersoftware\\Microservices\\TaskManagerMicroservice\\Dto\\": "microservices/TaskManagerMicroservice/Dto/"
     }
   }
 }
