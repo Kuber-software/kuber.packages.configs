@@ -1,4 +1,5 @@
 <?php
+
 namespace Kubersoftware\Microservices\KubeNosqlDatabaseClusterMicroservice\Enum;
 
 use Kubersoftware\Microservices\MicroservicesListEnum;
@@ -47,10 +48,15 @@ abstract class AbstractMongoCollectionsEnum
         return $this;
     }
 
-    public function getMicroserviceCollectionName(): string
+    public function setMicroserviceCollectionName()
     {
         $this->microserviceCollectionName = $this->getMicroservice()->getMicroserviceName() . '.' . $this->getCollectionName();
+        return $this;
+    }
 
+
+    public function getMicroserviceCollectionName(): string
+    {
         return $this->microserviceCollectionName;
     }
 }
