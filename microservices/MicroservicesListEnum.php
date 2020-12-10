@@ -22,7 +22,7 @@ class MicroservicesListEnum
     public const MICROSERVICE_TASK_MANAGER = "TaskManager";
     public const MICROSERVICE_USERS = "Users";
     public const MICROSERVICE_SCORING = "Scoring";
-
+//[ty
     /**
      * Имя микросервиса из констант класса Kubersoftware\Microservices\MicroservicesListEnum
      *
