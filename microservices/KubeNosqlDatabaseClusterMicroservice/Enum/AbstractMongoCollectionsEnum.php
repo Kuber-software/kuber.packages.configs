@@ -48,10 +48,9 @@ abstract class AbstractMongoCollectionsEnum
         return $this;
     }
 
-    public function setMicroserviceCollectionName(): AbstractMongoCollectionsEnum
+    public function setMicroserviceCollectionName(): void
     {
         $this->microserviceCollectionName = $this->getMicroservice()->getMicroserviceName() . '.' . $this->getCollectionName();
-        return $this;
     }
 
 
