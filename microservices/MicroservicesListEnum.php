@@ -22,7 +22,7 @@ class MicroservicesListEnum
     public const SECURITY = "Security";
     public const TASK_MANAGER = "TaskManager";
     public const USERS = "Users";
-    public const VALIDATOR = "Validator";
+    public const VALIDATOR = "Scoring";
 
     /**
      * Имя микросервиса из констант класса @MicroservicesListEnum
