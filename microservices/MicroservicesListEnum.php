@@ -24,8 +24,6 @@ class MicroservicesListEnum
     public const USERS = "Users";
     public const SCORING = "Scoring";
 
-    //;
-
     /**
      * Имя микросервиса из констант класса @MicroservicesListEnum
      *
