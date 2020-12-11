@@ -23,6 +23,34 @@ class ApiScoringDto
 
 
     /**
+     * Баланс Dadata
+     *
+     * @var string
+     */
+    private string $balanceDadata;
+
+
+
+    /**
+     * @return string
+     */
+    public function getBalanceDadata(): string
+    {
+        return $this->balanceDadata;
+    }
+
+    /**
+     * @param string $balanceDadata
+     * @return ApiScoringDto
+     */
+    public function setBalanceDadata(string $balanceDadata): ApiScoringDto
+    {
+        $this->balanceDadata = $balanceDadata;
+        return $this;
+    }
+
+
+    /**
      * @return MicroservicesListEnum
      */
     public function getServiceName(): MicroservicesListEnum
