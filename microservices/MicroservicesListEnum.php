@@ -14,15 +14,16 @@ namespace Kubersoftware\Microservices;
 class MicroservicesListEnum
 {
     public const API_DOC = "ApiDoc";
-    public const ENTITY_MANAGER = "EntityManager";
     public const CHECKER = "Checker";
+    public const ENTITY_MANAGER = "EntityManager";
     public const MAIN_DB_CLUSTER = "kuber_main_database_cluster";
-    public const NOSQL_DB_CLUSTER = "kuber_nosql_database_cluster";
     public const MESSAGE_BROKER = "MessageBroker";
+    public const NOSQL_DB_CLUSTER = "kuber_nosql_database_cluster";
+    public const SCORING = "Scoring";
     public const SECURITY = "Security";
     public const TASK_MANAGER = "TaskManager";
     public const USERS = "Users";
-    public const SCORING = "Scoring";
+
 
     /**
      * Имя микросервиса из констант класса @MicroservicesListEnum
