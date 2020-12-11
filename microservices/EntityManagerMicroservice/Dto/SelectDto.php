@@ -4,8 +4,7 @@
 namespace Kubersoftware\Microservices\EntityManagerMicroservice\Dto;
 
 
-use DateTime;
-use Kubersoftware\Microservices\MicroservicesListEnum;
+use Doctrine\Common\Collections\ArrayCollection;
 
 class SelectDto extends AbstractEntityManagerDto
 {
@@ -13,24 +12,23 @@ class SelectDto extends AbstractEntityManagerDto
      * Критерии выборки из БД.
      * Пример: [ 'name' => 'user_name', 'isActual' => false ]
      *
-     * @var array
+     * @var ArrayCollection
      */
-    private array $criteria;
-
+    private ArrayCollection $criteria;
 
     /**
-     * @return array
+     * @return ArrayCollection
      */
-    public function getCriteria(): array
+    public function getCriteria(): ArrayCollection
     {
         return $this->criteria;
     }
 
     /**
-     * @param array $criteria
+     * @param ArrayCollection $criteria
      * @return SelectDto
      */
-    public function setCriteria(array $criteria): SelectDto
+    public function setCriteria(ArrayCollection $criteria): SelectDto
     {
         $this->criteria = $criteria;
         return $this;
