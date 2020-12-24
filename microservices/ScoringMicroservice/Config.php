@@ -1,10 +1,10 @@
 <?php
 
-
 namespace Kubersoftware\Microservices\ScoringMicroservice;
 
 
-class Test
+class Config
 {
+    public const API_KEY_DADATA = '123456789';
 
 }
