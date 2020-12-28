@@ -5,7 +5,10 @@ namespace Kubersoftware\Microservices\TaskManagerMicroservice\Dto;
 
 
 use DateTime;
+use Doctrine\Common\Collections\ArrayCollection;
 use Kubersoftware\Microservices\MicroservicesListEnum;
+use Ramsey\Uuid\Uuid;
+use Ramsey\Uuid\UuidInterface;
 
 
 /**
@@ -15,14 +18,14 @@ use Kubersoftware\Microservices\MicroservicesListEnum;
  * Class TaskDto
  * @package Kubersoftware\Microservices\TaskManagerMicroservice\Dto
  */
-class TaskDto
+abstract class TaskDto
 {
     /**
      * Уникальный индетификатор задачи, выставляемый сервисом TaskManager
      *
-     * @var string
+     * @var UuidInterface
      */
-    private string $taskGuid;
+    private UuidInterface $uuid;
 
     /**
      * Имя микросервиса из констант класса @MicroservicesListEnum
@@ -45,30 +48,22 @@ class TaskDto
      */
     private DateTime $completedAt;
 
-    /**
-     * Результат выполнения задачи (выставляется после отработки задания)
-     * Может быть ответ
-     *
-     */
-    private string $response = '';
+
+    private ArrayCollection $arrayCollection;
 
 
-    /**
-     * @return string
-     */
-    public function getTaskGuid(): string
+    public function __construct()
     {
-        return $this->taskGuid;
+        $this->createdAt = new DateTime();
+        $this->taskGuid = Uuid::uuid4();
     }
 
     /**
-     * @param string $taskGuid
-     * @return TaskDto
+     * @return UuidInterface
      */
-    public function setTaskGuid(string $taskGuid): TaskDto
+    public function getUuid(): UuidInterface
     {
-        $this->taskGuid = $taskGuid;
-        return $this;
+        return $this->uuid;
     }
 
     /**
@@ -116,30 +111,21 @@ class TaskDto
     }
 
     /**
-     * @param DateTime $completedAt
-     * @return TaskDto
+     * @return ArrayCollection
      */
-    public function setCompletedAt(DateTime $completedAt): TaskDto
+    public function getArrayCollection(): ArrayCollection
     {
-        $this->completedAt = $completedAt;
-        return $this;
+        return $this->arrayCollection;
     }
 
     /**
-     * @return string
-     */
-    public function getResponse(): string
-    {
-        return $this->response;
-    }
-
-    /**
-     * @param string $response
+     * @param ArrayCollection $arrayCollection
      * @return TaskDto
      */
-    public function setResponse(string $response): TaskDto
+    public function setArrayCollection(ArrayCollection $arrayCollection): TaskDto
     {
-        $this->response = $response;
+        $this->arrayCollection = $arrayCollection;
         return $this;
     }
+
 }
