@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Kubersoftware\Microservices\NosqlManagerMicroservice\Dto\UserTokensCollection;
+namespace Kubersoftware\Microservices\NosqlManagerMicroservice\UserTokensCollection\Dto;
 
 
 class InsertUserTokenDto

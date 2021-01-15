@@ -14,8 +14,12 @@
       "Kubersoftware\\Microservices\\": "microservices/",
       "Kubersoftware\\Microservices\\ApiDocMicroservice\\": "microservices/ApiDocMicroservice/",
       "Kubersoftware\\Microservices\\ApiDocMicroservice\\Dto\\": "microservices/ApiDocMicroservice/Dto/",
+
+
       "Kubersoftware\\Microservices\\NosqlManagerMicroservice\\Enum\\": "microservices/NosqlManagerMicroservice/Enum/",
       "Kubersoftware\\Microservices\\NosqlManagerMicroservice\\": "microservices/NosqlManagerMicroservice/",
+
+
       "Kubersoftware\\Microservices\\MessageBrokerMicroservice\\Enum\\": "microservices/MessageBrokerMicroservice/Enum/",
       "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Dto\\": "microservices/EntityManagerMicroservice/Dto/",
       "Kubersoftware\\Microservices\\EntityManagerMicroservice\\Enum\\": "microservices/EntityManagerMicroservice/Enum/",

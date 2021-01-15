@@ -4,8 +4,7 @@ namespace Kubersoftware\Microservices\NosqlManagerMicroservice\UserTokensCollect
 
 use Kubersoftware\Microservices\MessageBrokerMicroservice\AbstractMessageBrokerObject;
 use Kubersoftware\Microservices\MicroservicesListEnum;
-use Kubersoftware\Microservices\NosqlManagerMicroservice\Dto\UserTokensCollection\InsertUserTokenDto;
-use Kubersoftware\Microservices\NosqlManagerMicroservice\Dto\UserTokensCollection\InsertUserTokenMethodInterface;
+use Kubersoftware\Microservices\NosqlManagerMicroservice\UserTokensCollection\Dto\InsertUserTokenDto;
 
 class InsertUserTokenMethod extends AbstractMessageBrokerObject implements InsertUserTokenMethodInterface
 {

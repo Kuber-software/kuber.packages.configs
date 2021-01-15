@@ -1,7 +1,8 @@
 <?php
 namespace Kubersoftware\Microservices\NosqlManagerMicroservice\UserTokensCollection\Method;
 
-namespace Kubersoftware\Microservices\NosqlManagerMicroservice\Dto\UserTokensCollection;
+
+use Kubersoftware\Microservices\NosqlManagerMicroservice\UserTokensCollection\Dto\InsertUserTokenDto;
 
 interface InsertUserTokenMethodInterface
 {
