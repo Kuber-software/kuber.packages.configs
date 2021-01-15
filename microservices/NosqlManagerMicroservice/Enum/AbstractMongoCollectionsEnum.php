@@ -1,6 +1,6 @@
 <?php
 
-namespace Kubersoftware\Microservices\KubeNosqlDatabaseClusterMicroservice\Enum;
+namespace Kubersoftware\Microservices\NosqlManagerMicroservice\Enum;
 
 use Kubersoftware\Microservices\MicroservicesListEnum;
 
