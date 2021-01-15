@@ -55,4 +55,29 @@ class InsertUserTokenMethod extends AbstractMessageBrokerObject implements Inser
         $this->updatedAt = $updatedAt;
         return $this;
     }
+
+    /**
+     * @return int
+     */
+    public function getRequestTimeInSec(): int
+    {
+        return $this->requestTimeInSec;
+    }
+
+    /**
+     * @return \DateTime
+     */
+    public function getCreatedAt(): \DateTime
+    {
+        return $this->createdAt;
+    }
+
+    /**
+     * @return MicroservicesListEnum
+     */
+    public function getMicroserviceName(): MicroservicesListEnum
+    {
+        return $this->microserviceName;
+    }
+
 }
