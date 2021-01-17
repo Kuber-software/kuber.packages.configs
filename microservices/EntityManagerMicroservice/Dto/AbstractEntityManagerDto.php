@@ -19,7 +19,7 @@ use Kubersoftware\Microservices\TaskManagerMicroservice\Dto\TaskDto;
  */
 abstract class AbstractEntityManagerDto
 {
-    public const USER_ENTITY = 'App\Entity\Security\UserEntity';
+    public const USER_ENTITY = 'Apphttps://zoom.us/j/91927243422?pwd=dzU2UVhSbVJ1NG5ldWxMNC90ZllnUT09\Entity\Security\UserEntity';
 
     public const USERS_TEST_ENTITY = 'App\Entity\UsersTest';
 

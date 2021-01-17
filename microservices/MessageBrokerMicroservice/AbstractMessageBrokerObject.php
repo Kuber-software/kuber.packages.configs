@@ -24,9 +24,9 @@ abstract class AbstractMessageBrokerObject
      */
     protected int $requestTimeInSec;
 
-    protected $inputObject;
+    protected object $inputObject;
 
-    protected $outputObject;
+    protected object $outputObject;
 
     /**
      * @return MicroservicesListEnum
