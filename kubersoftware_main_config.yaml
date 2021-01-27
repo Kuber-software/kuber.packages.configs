@@ -11,7 +11,6 @@ kubersoftware_configs:
                     default:
                         url: '%env(RABBITMQ_URL)%'
                 rpc_clients:
-                    # АВТО Добавить название rpc_client, получаем из названия микросервиса
                     api_gateway:
                         connection: default #default: default
                         unserializer: json_decode #default: unserialize
@@ -32,18 +31,15 @@ kubersoftware_configs:
                     default:
                         url: '%env(RABBITMQ_URL)%'
                 rpc_server:
-                    connection: default
-                        # АВТО Добавить callback: имя_микросервиса_server
+                    nosql_manager:
+                        connection: default
                         callback: nosql_manager_server
                         qos_options: { prefetch_size: 0, prefetch_count: 1, global: false }
-                        exchange_options: { name: random_int, type: topic }
+                        exchange_options: { name: nosql_manager, type: topic }
                         queue_options:
-                            # АВТО Добавить name: имя_микросервиса_queue
                             name: nosql_manager_queue
                             routing_keys:
-                                # Default key
-                                -
-                                # UserTokenEntity
+                                - ''
                                 - 'insertOneUserTokenEntity'
                                 - 'findOneByUserToken'
                             durable: false
@@ -53,10 +49,44 @@ kubersoftware_configs:
 
 
         api_doc:
+            old_sound_rabbit_mq:
+                connections:
+                    logger:
+                        url: '%env(RABBITMQ_URL)%'
+                        read_write_timeout: 4
+                        heartbeat: 2
+                    default:
+                        url: '%env(RABBITMQ_URL)%'
+                        read_write_timeout: 4
+                        heartbeat: 2
+                consumers:
+                    api_doc:
+                        connection: default
+                        exchange_options: { name: 'api_doc', type: direct }
+                        queue_options: { name: 'api_doc_queue' }
+                        callback: message_service
             variables:
                 file_path: '/var/www/html/public/doc.json'
                 version_date_format: 'Y-m-d'
                 version_datetime_format: 'Y-m-d_H:i:s'
 
 
+
+        notifier:
+            old_sound_rabbit_mq:
+                connections:
+                    default:
+                        url: '%env(RABBITMQ_URL)%'
+                        read_write_timeout: 4
+                        heartbeat: 2
+                consumers:
+                    notifier:
+                        connection: default
+                        exchange_options: { name: 'notifier', type: fanout }
+                        queue_options: { name: 'notifier_queue' }
+                        callback: notifier_consumer
+
+
+
+        logger:
 
